@@ -1,0 +1,115 @@
+<form class="form-user-incomings" action="#" method="get">
+
+  <h3>{{ _('Impuestos') }}</h3>
+
+  <div class="row">
+    <div class="form-group">
+      <label for="select-house">{{  _('Valor catastral de la vivienda') }}</label>
+      <div class="input-group">
+        <input id="select-house" type="text" class="form-control" placeholder="{{ _('Introduce el valor catastral de la vivienda') }}">
+        <div class="input-group-addon">€</div>
+      </div>
+    </div>
+    <div class="select-info">{{ _('IBI') }}: <span id="select-house-tax"></span></div>
+    <div class="form-group" style="clear: both">
+      <label for="select-house-bonus">{{ _('Bonificaciones') }}</label>
+      <select id="select-house-bonus" class="form-control">
+        <option value="0" type="text" selected="selected">{{ _('Ninguna') }}</option>
+        <option value="1" type="text">{{ _('Familia numerosa hasta 5 hijos') }}</option>
+        <option value="2" type="text">{{ _('Familia numerosa de 6 o más hijos') }}</option>
+        <option value="3" type="text">{{ _('Sistemas para el aprovechamiento de la energía del sol') }}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group">
+      <label for="select-vehicle">{{ _('Vehículo') }}</label>
+      <select id="select-vehicle" class="form-control">
+        <option value="0" type="text" selected="selected">{{ _('Ninguno') }}</option>
+        <option value="1" type="text">{{ _('Ciclomotores') }}</option>
+        <option value="2" type="text">{{ _('Motocicletas hasta 125 cc') }}</option>
+        <option value="3" type="text">{{ _('Motocicletas entre 125 cc y 250 cc') }}</option>
+        <option value="4" type="text">{{ _('Motocicletas entre 250 cc y 500 cc') }}</option>
+        <option value="5" type="text">{{ _('Motocicletas entre 500 cc y 1000 cc') }}</option>
+        <option value="6" type="text">{{ _('Motocicletas de más de 1000 cc') }}</option>
+        <option value="7" type="text">{{ _('Turismo de menos de 9 caballos fiscales') }}</option>
+        <option value="8" type="text">{{ _('Turismo de 9 hasta 11,99 caballos fiscales') }}</option>
+        <option value="9" type="text">{{ _('Turismo de 12 hasta 13,99 caballos fiscales') }}</option>
+        <option value="10" type="text">{{ _('Turismo de 14 hasta 15,99 caballos fiscales') }}</option>
+        <option value="11" type="text">{{ _('Turismo de 16 hasta 19,99 caballos fiscales') }}</option>
+        <option value="12" type="text">{{ _('Turismo de 20 caballos fiscales en adelante') }}</option>
+      </select>
+    </div>
+    <div class="select-info">{{ _('IVTM') }}: <span id="select-vehicle-tax"></span></div>
+    <div class="form-group" style="clear: both">
+      <label for="select-vehicle-bonus">{{ _('Bonificaciones') }}</label>
+      <select id="select-vehicle-bonus" class="form-control">
+        <option value="0" type="text" selected="selected">{{ _('Ninguna') }}</option>
+        <option value="1" type="text">{{ _('Exención por discapacidad') }}</option>
+        <option value="2" type="text">{{ _('Vehículos históricos') }}</option>
+        <option value="3" type="text">{{ _('Vehículos eléctricos, híbridos o a gas') }}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group">
+      <label for="select-extra-vehicle">{{ _('Vehículo adicional') }}</label>
+      <select id="select-extra-vehicle" class="form-control">
+        <option value="0" type="text" selected="selected">{{ _('Ninguno') }}</option>
+        <option value="1" type="text">{{ _('Ciclomotores') }}</option>
+        <option value="2" type="text">{{ _('Motocicletas hasta 125 cc') }}</option>
+        <option value="3" type="text">{{ _('Motocicletas entre 125 cc y 250 cc') }}</option>
+        <option value="4" type="text">{{ _('Motocicletas entre 250 cc y 500 cc') }}</option>
+        <option value="5" type="text">{{ _('Motocicletas entre 500 cc y 1000 cc') }}</option>
+        <option value="6" type="text">{{ _('Motocicletas de más de 1000 cc') }}</option>
+        <option value="7" type="text">{{ _('Turismo de menos de 9 caballos fiscales') }}</option>
+        <option value="8" type="text">{{ _('Turismo de 9 hasta 11,99 caballos fiscales') }}</option>
+        <option value="9" type="text">{{ _('Turismo de 12 hasta 13,99 caballos fiscales') }}</option>
+        <option value="10" type="text">{{ _('Turismo de 14 hasta 15,99 caballos fiscales') }}</option>
+        <option value="11" type="text">{{ _('Turismo de 16 hasta 19,99 caballos fiscales') }}</option>
+        <option value="12" type="text">{{ _('Turismo de 20 caballos fiscales en adelante') }}</option>
+      </select>
+    </div>
+    <div class="select-info">{{ _('IVTM') }}: <span id="select-extra-vehicle-tax"></span></div>
+    <div class="form-group" style="clear: both">
+      <label for="select-extra-vehicle-bonus">{{ _('Bonificaciones') }}</label>
+      <select id="select-extra-vehicle-bonus" class="form-control">
+        <option value="0" type="text" selected="selected">{{ _('Ninguna') }}</option>
+        <option value="1" type="text">{{ _('Vehículos de más de 25 años') }}</option>
+        <option value="2" type="text">{{ _('Vehículos históricos') }}</option>
+        <option value="3" type="text">{{ _('Vehículos eléctricos, híbridos o a gas') }}</option>
+      </select>
+    </div>
+  </div>
+
+
+  <h3>{{ _('Tasas') }}</h3>
+
+  <div class="row">
+    <div class="form-group">
+      <label for="select-garbage">{{ _('¿Abonas la tasa de basuras de tu vivienda?') }}</label>
+      <select id="select-garbage" class="form-control">
+        <option value="0" type="text" selected="selected">{{ _('No') }}</option>
+        <option value="1" type="text">{{ _('Sí') }}</option>
+      </select>
+    </div>
+    <div class="select-info">{{ _('Basuras') }}: <span id="select-garbage-tax"></span></div>
+  </div>
+
+  <div class="row">
+    <div class="form-group">
+      <label for="select-parking">{{ _('¿Tienes un vado?') }}</label>
+      <select id="select-parking" class="form-control">
+        <option value="0" type="text" selected="selected">{{ _('No') }}</option>
+        <option value="1" type="text">{{ _('Sí, de 3 metros') }}</option>
+        <option value="2" type="text">{{ _('Sí, de 5 metros') }}</option>
+      </select>
+    </div>
+    <div class="select-info">{{ _('Vados') }}: <span id="select-parking-tax"></span></div>
+  </div>
+
+</form>
+
+<p id="tax-amount">{{ _('Contribuyes con un total de <strong id="tax-amount-paid"></strong> a los presupuestos del Gobierno de Aragón')|safe }}.</p>

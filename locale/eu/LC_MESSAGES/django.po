@@ -1,0 +1,169 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-18 12:14+0100\n"
+"PO-Revision-Date: 2016-11-18 13:29+0100\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: David Cabo <david@civio.es>\n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.11\n"
+
+#: templates/base.html:4 templates/shared/social_sharing.html:5
+msgid "Presupuestos del Gobierno de Aragón"
+msgstr "Hernaniko Udala aurrekontuak"
+
+#
+msgid "Información presupuestaria del Gobierno de Aragón"
+msgstr "Hernaniko Udalaren aurrekontuei buruzko informazioa"
+
+#: templates/budgets/budgets_intro.html:16
+msgid "El dinero recaudado localmente se complementa con las transferencias de la Administración General del Estado y del Gobierno de Aragón, que son los encargados de recaudar otros ingresos como el IVA y el IRPF"
+msgstr "Udalerriek zergen bidez bildutako dirua osatzeko, Gipuzkoako Foru Aldundiaren transferentziak jasotzen dituzte, haiek arduratzen baitira beste zerga batzuk biltzeaz, hala nola, BEZ eta PFEZ"
+
+#: templates/budgets/index.html:17
+msgid "Ingresos y gastos en el Gobierno de Aragón"
+msgstr "Hernaniko Udalaren diru-sarrerak eta gastuak"
+
+#: templates/budgets/index.html:127 templates/shared/data_sources.html:7
+#: templates/shared/footer.html:18 templates/shared/header.html:28
+#: templates/shared/header.html.py:61 templates/welcome/index.html:54
+msgid "Gobierno de Aragón"
+msgstr "Hernaniko Udala"
+
+#: templates/shared/data_sources.html:9
+msgid "Datos de inflación (Medias anuales de IPC para Aragón)"
+msgstr "Inflazioaren datuak (Euskal Herrian KPIren urteroko batez bestekoak)"
+
+#: templates/shared/data_sources.html:14
+msgid "Los ingresos y gastos mostrados incluyen únicamente al Gobierno de Aragón"
+msgstr "Erakusten diren diru-sarrerak eta gastuak Hernaniko Udalari dagozkionak baino ez dira"
+
+#: templates/tax_receipt/tax_receipt_form.html:75
+msgid "Contribuyes con un total de <strong id=\"tax-amount-paid\"></strong> a los presupuestos del Gobierno de Aragón"
+msgstr "Guztira, <strong id=\"tax-amount-paid\"></strong>(e)ko ekarpena egiten diezu Hernaniko Udala aurrekontuei."
+
+#: templates/welcome/index.html:12
+msgid "¿Cómo y en qué gasta el Gobierno de Aragón?"
+msgstr "Nola eta zertan gastatzen du dirua Hernaniko Udalak?"
+
+#: templates/welcome/index.html:42
+msgid "Para que tengas una idea general de los ingresos y gastos del Gobierno de Aragón"
+msgstr "Hernaniko Udalaren diru-sarreren eta gastuen ideia orokor bat izan dezazun"
+
+#: templates/budgets/budgets_totals.html:51
+msgid "Cantidades actualizadas con la inflación a fecha 1 de enero de %s."
+msgstr "Inflazioarekin eguneratutako kopuruak, %sko urtarrilaren 1eko datarekin."
+
+#: templates/shared/data_sources.html:15
+msgid "El ajuste de la inflación se realiza a <strong>1 de enero de %s</strong>."
+msgstr "Inflazioaren araberako doikuntza <strong>%sko urtarrilaren 1eko datarekin egiten da</strong>."
+
+#: templates/tax_receipt/tax_receipt_form.html:
+msgid "IBI"
+msgstr "OHZ"
+
+msgid "Valor catastral de la vivienda"
+msgstr "Etxebizitzako balio katastrala"
+
+msgid "Introduce el valor catastral de la vivienda"
+msgstr "Balio katastrala sartzen du etxebizitzatik"
+
+msgid "Bonificaciones"
+msgstr "Hobariak"
+
+msgid "Ninguna"
+msgstr "Bat ere ez"
+
+msgid "Familia numerosa hasta 5 hijos"
+msgstr "5 seme-alaba dituzten familientzat"
+
+msgid "Familia numerosa de 6 o más hijos"
+msgstr "6 seme-alaba edo gehiago dituztenentzat"
+
+msgid "Sistemas para el aprovechamiento de la energía del sol"
+msgstr "Eguzkiaren energiako ustiapenarentzat sistemak"
+
+msgid "IVTM"
+msgstr "TMIZ"
+
+msgid "Ciclomotores"
+msgstr "Ziklomotorrak"
+
+msgid "Motocicletas hasta 125 cc"
+msgstr "125 cc-tik beherako motorrak"
+
+msgid "Motocicletas entre 125 cc y 250 cc"
+msgstr "125 eta 250 cc bitarteko motorrak"
+
+msgid "Motocicletas entre 250 cc y 500 cc"
+msgstr "250 eta 500 cc bitarteko motorrak"
+
+msgid "Motocicletas entre 500 cc y 1000 cc"
+msgstr "500 eta 1.000 cc bitarteko motorrak"
+
+msgid "Motocicletas de más de 1000 cc"
+msgstr "1.000 cc-tik goragoko motorrak"
+
+msgid "Turismo de menos de 9 caballos fiscales"
+msgstr "9 zerga-zaldi baino gutxiago dutenak turismoa"
+
+msgid "Turismo de 9 hasta 11,99 caballos fiscales"
+msgstr "9 eta 11'99 zerga-zaldi bitartekoak turismoa"
+
+msgid "Turismo de 12 hasta 13,99 caballos fiscales"
+msgstr "12 eta 13'99 zerga-zaldi bitartekoak turismoa"
+
+msgid "Turismo de 14 hasta 15,99 caballos fiscales"
+msgstr "14 eta 15'99 zerga-zaldi bitartekoak turismoa"
+
+msgid "Turismo de 16 hasta 19,99 caballos fiscales"
+msgstr "16 eta 19'99 zerga-zaldi bitartekoak turismoa"
+
+msgid "Turismo de 20 caballos fiscales en adelante"
+msgstr "20 zerga-zalditik gorakoak turismoa"
+
+msgid "Exención por discapacidad"
+msgstr "Desgaitasunagatik salbuespena"
+
+msgid "Vehículos históricos"
+msgstr "Historikoak ibilgailuak"
+
+msgid "Vehículos eléctricos, híbridos o a gas"
+msgstr "Elektrikoa, hibridoa eta gasoa ibilgailuak"
+
+msgid "Vehículos de más de 25 años"
+msgstr "25 urtez sobera ibilgailuak"
+
+msgid "Basuras"
+msgstr "Zaborrak"
+
+msgid "¿Abonas la tasa de basuras de tu vivienda?"
+msgstr "Ordaintzen duzu zaborretako zure etxebizitzako tasa?"
+
+msgid "Sí"
+msgstr "Bai"
+
+msgid "Vados"
+msgstr "Ibilgailuen sarrera"
+
+msgid "Sí, de 3 metros"
+msgstr "Bai, 3m-ren"
+
+msgid "Sí, de 5 metros"
+msgstr "Bai, 5m-ren"
+
+#: templates/shared/footer.html:
+msgid "Un proyecto basado en el código de"
+msgstr "Oinarri-kodea:"
+
+msgid "Empresa desarrolladora"
+msgstr "Enpresa egilea"

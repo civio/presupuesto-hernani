@@ -1,0 +1,10 @@
+@import "theme-variables";
+
+.home-content .options .option>div .icon {
+  color: $brand-secondary;
+}
+
+.tax-receipt-content #tax-amount {
+  border: none;
+  background: $brand-secondary;
+}

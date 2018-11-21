@@ -85,11 +85,11 @@ LANGUAGES = (
 
 # Facebook Aplication ID used in social_sharing temaplate. Default: ''
 # In order to get the ID create an app in https://developers.facebook.com/
-FACEBOOK_ID = ''
+FACEBOOK_ID = '2169707773247610'
 
 # Google Analytics ID. Default: ''
 # In order to get the ID create a Google Analytics Acount in https://analytics.google.com/analytics/web/
-ANALYTICS_ID = ''
+ANALYTICS_ID = 'UA-28946840-51'
 
 # Setup Data Source Budget link
 DATA_SOURCE_BUDGET = 'http://www.hernani.eus/eu/aurrekontua'

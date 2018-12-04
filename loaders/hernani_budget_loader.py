@@ -3,13 +3,11 @@ from budget_app.loaders import SimpleBudgetLoader
 
 
 expenses_mapping = {
-    'default': {'ic_code': 4, 'fc_code': 3, 'full_ec_code': 0, 'description': 1, 'forecast_amount': 8, 'actual_amount': 9},
-    '2015': {'ic_code': 4, 'fc_code': 3, 'full_ec_code': 1, 'description': 2, 'forecast_amount': 8, 'actual_amount': 9},
+    'default': {'ic_code': 17, 'fc_code': 13, 'full_ec_code': 0, 'description': 1, 'forecast_amount': 4, 'actual_amount': 9},
 }
 
 income_mapping = {
-    'default': {'ic_code': 4, 'full_ec_code': 0, 'description': 1, 'forecast_amount': 8, 'actual_amount': 11},
-    '2015': {'ic_code': 4, 'full_ec_code': 1, 'description': 2, 'forecast_amount': 8, 'actual_amount': 11},
+    'default': {'ic_code': None, 'full_ec_code': 0, 'description': 3, 'forecast_amount': 4, 'actual_amount': 5},
 }
 
 programme_mapping = {
@@ -52,20 +50,6 @@ class HernaniBudgetLoader(SimpleBudgetLoader):
         # Mapper
         mapper = BudgetCsvMapper(self.year, is_expense)
 
-        # Institutional code
-        # We got 2- digit institutional codes as input, so we add two leading zeroes
-        ic_code = line[mapper.ic_code].strip()
-        ic_code = ic_code.rjust(4, '0')
-
-        # Economic code
-        full_ec_code = line[mapper.full_ec_code].strip()
-
-        # Concepts are the first three digits from the economic codes
-        ec_code = full_ec_code[:3]
-
-        # Item numbers are the last two digits from the economic codes (fourth and fifth digits)
-        item_number = full_ec_code[-2:]
-
         # Description
         description = line[mapper.description].strip()
 
@@ -75,6 +59,27 @@ class HernaniBudgetLoader(SimpleBudgetLoader):
 
         # Expenses
         if is_expense:
+            # Institutional code
+            # We got 2- or 4- digit institutional codes as input, but we only
+            # need the first two, although we need to be able to represent the
+            # number in just one char and then get a three digit code
+            ic_code = line[mapper.ic_code].strip()
+            ic_code = hex(int(ic_code[:2]))[2:].upper()
+            ic_code = '0' + ic_code + '0'
+
+            # Economic code
+            # We get the full budget line, so we have to split and amend
+            full_ec_code = line[mapper.full_ec_code].strip()
+            full_ec_code = full_ec_code.split(" ")[1:-1][0]
+            full_ec_code = full_ec_code.split(".")[1:3]
+            full_ec_code = "".join(full_ec_code)
+
+            # Concepts are the first three digits from the economic codes
+            ec_code = full_ec_code[:3]
+
+            # Item numbers are the last two digits from the economic codes (fourth and fifth digits)
+            item_number = full_ec_code[-2:]
+
             # Functional code
             # We got 5- digit functional codes as input
             fc_code = line[mapper.fc_code].strip()
@@ -88,6 +93,23 @@ class HernaniBudgetLoader(SimpleBudgetLoader):
 
         # Income
         else:
+            # Institutional code
+            # All income goes to the root node
+            ic_code = '000'
+
+            # Economic code
+            # We get the full budget line, so we have to split and amend
+            full_ec_code = line[mapper.full_ec_code].strip()
+            full_ec_code = full_ec_code.split(" ")[1:-1][0]
+            full_ec_code = full_ec_code.split(".")[:2]
+            full_ec_code = "".join(full_ec_code)
+
+            # Concepts are the first three digits from the economic codes
+            ec_code = full_ec_code[:3]
+
+            # Item numbers are the last two digits from the economic codes (fourth and fifth digits)
+            item_number = full_ec_code[-2:]
+
             # Functional code
             # We don't need functional codes in income
             fc_code = None

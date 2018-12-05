@@ -124,7 +124,7 @@ COOKIES_URL = ''
 # ----------------------
 
 # Programmes to feature as example in home page.
-FEATURED_PROGRAMMES = ['33300', '16300', '13000', '23110', '15000', '32610']
+FEATURED_PROGRAMMES = ['15110', '16210', '33400', '23190', '92002', '34200', '32310', '13200', '17100']
 
 # Number of programmes to feature in home page. Default: 3
 # NUMBER_OF_FEATURED_PROGRAMMES = 3

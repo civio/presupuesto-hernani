@@ -17,36 +17,66 @@
       return value;
     }
 
+    // House extra tax
+    var houseExtraValue = function() {
+      var value = parseFloat($("#select-house-extra").val().replace(/\./g, "").replace(/,/, ".")).toFixed(0);
+      if (isNaN(value)) {
+        $("#select-house-extra").val("")
+        value = "";
+      }
+      return value;
+    }
+
     // Set tax receipt taxes values
     TaxReceipt.taxes.house.callback = function(selector, values) {
       var value = houseValue();
-      var quota = value * 0.002342 ;
+      var quota = value * 0.001959;
       var bonus = $('#select-house-bonus').val() | 0;
-      var bonusValues = [0, .5, .9, .5];
+      var bonusValues = [0, .5, .6, .9, .5];
+      return (quota * (1 - bonusValues[bonus])) + TaxReceipt.taxes.houseExtra.callback()
+    };
+    TaxReceipt.taxes.houseExtra = {};
+    TaxReceipt.taxes.houseExtra.callback = function() {
+      var value = houseExtraValue();
+      var quota = value * 0.001959
+      var bonus = 0;
+      var bonusValues = [-1];
       return quota * (1 - bonusValues[bonus]);
     };
 
-    TaxReceipt.taxes.vehicle.values      = [0, 10.94, 10.96, 18.79, 38.00, 77.73, 157.64, 43.10, 81.88, 148.60, 188.31, 282.08, 353.74];
+    TaxReceipt.taxes.vehicle.values = [0, 10.50, 10.50, 19.20, 39.20, 78.30, 156.55, 28.00, 82.10, 152.60, 218.70, 290.45, 366.40];
     TaxReceipt.taxes.vehicle.callback = function(selector, values) {
       var value = $('#select-vehicle').val();
       var quota = values[value];
       var bonus = $('#select-vehicle-bonus').val() | 0;
-      var bonusValues = [0, 1, 1, .5];
-      return quota * (1 - bonusValues[bonus]);
+      var bonusValues = [0, 1, 1, .75];
+      $('#select-extra-vehicle-bonus option').each(function() {
+          $(this).show()
+        });
+      if (bonus == 1 || bonus == 2) {
+        $('#select-extra-vehicle-bonus option[value="' + bonus + '"]').hide()
+      }
+      return quota * (1 - bonusValues[bonus]) + TaxReceipt.taxes.vehicleExtra.callback();
     };
-
-    TaxReceipt.taxes.vehicleExtra.values = [0, 10.94, 10.96, 18.79, 38.00, 77.73, 157.64, 43.10, 81.88, 148.60, 188.31, 282.08, 353.74];
-    TaxReceipt.taxes.vehicleExtra.callback = function(selector, values) {
+    TaxReceipt.taxes.vehicleExtra = {};
+    TaxReceipt.taxes.vehicleExtra.values = [0, 10.50, 10.50, 19.20, 39.20, 78.30, 156.55, 28.00, 82.10, 152.60, 218.70, 290.45, 366.40];
+    TaxReceipt.taxes.vehicleExtra.callback = function() {
       var value = $('#select-extra-vehicle').val();
-      var quota = values[value];
+      var quota = this.values[value];
       var bonus = $('#select-extra-vehicle-bonus').val() | 0;
-      var bonusValues = [0, .5, 1, .5];
+      var bonusValues = [0, 1, 1, .75];
+      $('#select-vehicle-bonus option').each(function() {
+          $(this).show()
+        });
+      if (bonus == 1 || bonus == 2) {
+        $('#select-vehicle-bonus option[value="' + bonus + '"]').hide()
+      }
       return quota * (1 - bonusValues[bonus]);
     };
 
     // Set tax receipt taxes values
-    TaxReceipt.taxes.garbage.values      = [0, 119.04];
-    TaxReceipt.taxes.parking.values      = [0, 14.18*3, 14.18*5];
+    TaxReceipt.taxes.garbage.values      = [0, 19.50*4, 26.00*4];
+    TaxReceipt.taxes.parking.values      = [0, 0, 17.30*3, 17.30*5];
 
     // Add extra tax
     // We can add new taxed to TaxReceipt.taxes object
@@ -88,6 +118,17 @@
       var keycode = event.which;
       if (keycode == 13)
         $("#select-house-bonus").trigger("focus");
+    });
+
+    // Currency mask for house extra input
+    $("#select-house-extra").change(function() {
+      $("#select-house-extra").val(houseExtraValue().replace(/(\d)(?=(?:\d{3})+\b)/g, "$1."));
+    });
+
+    $("#select-house-extra").on("keypress", function(event) {
+      var keycode = event.which;
+      if (keycode == 13)
+        $("#select-vehicle").trigger("focus");
     });
 
   });

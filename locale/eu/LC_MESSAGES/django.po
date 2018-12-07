@@ -49,7 +49,7 @@ msgstr "Erakusten diren diru-sarrerak eta gastuak Hernaniko Udalari dagozkionak 
 
 #: templates/tax_receipt/tax_receipt_form.html:75
 msgid "Contribuyes con un total de <strong id=\"tax-amount-paid\"></strong> a los presupuestos del Gobierno de Aragón"
-msgstr "Guztira, <strong id=\"tax-amount-paid\"></strong>(e)ko ekarpena egiten diezu Hernaniko Udala aurrekontuei."
+msgstr "Guztira, <strong id=\"tax-amount-paid\"></strong>(e)ko ekarpena egiten diezu Hernaniko Udala aurrekontuei"
 
 #: templates/welcome/index.html:12
 msgid "¿Cómo y en qué gasta el Gobierno de Aragón?"
@@ -71,8 +71,11 @@ msgstr "Inflazioaren araberako doikuntza <strong>%sko urtarrilaren 1eko datareki
 msgid "IBI"
 msgstr "OHZ"
 
-msgid "Valor catastral de la vivienda"
-msgstr "Etxebizitzako balio katastrala"
+msgid "VIVIENDA HABITUAL"
+msgstr "OHIKO ETXEBIZITZA"
+
+msgid "VIVIENDA ADICIONAL"
+msgstr "ETXEBIZITZA GEHIGARRIA"
 
 msgid "Introduce el valor catastral de la vivienda"
 msgstr "Balio katastrala sartzen du etxebizitzatik"
@@ -83,17 +86,26 @@ msgstr "Hobariak"
 msgid "Ninguna"
 msgstr "Bat ere ez"
 
-msgid "Familia numerosa hasta 5 hijos"
-msgstr "5 seme-alaba dituzten familientzat"
+msgid "Familia numerosa con 3 hijos"
+msgstr "3 seme-alaba dituzten familientzat"
 
-msgid "Familia numerosa de 6 o más hijos"
-msgstr "6 seme-alaba edo gehiago dituztenentzat"
+msgid "Familia numerosa con 4 hijos"
+msgstr "4 seme-alaba dituzten familientzat"
 
-msgid "Sistemas para el aprovechamiento de la energía del sol"
-msgstr "Eguzkiaren energiako ustiapenarentzat sistemak"
+msgid "Familia numerosa con 5 o más hijos"
+msgstr "5 seme-alaba edo gehiago dituztenentzat"
+
+msgid "Programa de Vivienda Vacía o similares"
+msgstr "Bizigune edo antzeko programak"
 
 msgid "IVTM"
 msgstr "TMIZ"
+
+msgid "VEHÍCULO PRINCIPAL"
+msgstr "IBILGAILU NAGUSIA"
+
+msgid "VEHÍCULO ADICIONAL"
+msgstr "IBILGAILU GEHIGARRIA"
 
 msgid "Ciclomotores"
 msgstr "Ziklomotorrak"
@@ -134,20 +146,23 @@ msgstr "20 zerga-zalditik gorakoak turismoa"
 msgid "Exención por discapacidad"
 msgstr "Desgaitasunagatik salbuespena"
 
-msgid "Vehículos históricos"
-msgstr "Historikoak ibilgailuak"
+msgid "Vehículos históricos o de más de 25 años"
+msgstr "Historikoak edo 25 urtez sobera ibilgailuak"
 
 msgid "Vehículos eléctricos, híbridos o a gas"
-msgstr "Elektrikoa, hibridoa eta gasoa ibilgailuak"
+msgstr "Elektrikoa, hibridoa edo gasoa ibilgailuak"
 
-msgid "Vehículos de más de 25 años"
-msgstr "25 urtez sobera ibilgailuak"
+msgid "Selecciona una opción"
+msgstr "Aukera bat hautatu"
 
 msgid "Basuras"
-msgstr "Zaborrak"
+msgstr "Hondakinen bilketa"
 
-msgid "¿Abonas la tasa de basuras de tu vivienda?"
-msgstr "Ordaintzen duzu zaborretako zure etxebizitzako tasa?"
+msgid "RECOGIDA DE RESIDUOS"
+msgstr "HONDAKINEN BILKETA"
+
+msgid "¿Tienes compostador?"
+msgstr "Konpostagailua bat duzu?"
 
 msgid "Sí"
 msgstr "Bai"
@@ -155,15 +170,11 @@ msgstr "Bai"
 msgid "Vados"
 msgstr "Ibilgailuen sarrera"
 
+msgid "ENTRADA DE VEHÍCULOS"
+msgstr "IBILGAILUEN SARRERA"
+
 msgid "Sí, de 3 metros"
 msgstr "Bai, 3m-ren"
 
 msgid "Sí, de 5 metros"
 msgstr "Bai, 5m-ren"
-
-#: templates/shared/footer.html:
-msgid "Un proyecto basado en el código de"
-msgstr "Oinarri-kodea:"
-
-msgid "Empresa desarrolladora"
-msgstr "Enpresa egilea"

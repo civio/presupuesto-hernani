@@ -3,10 +3,11 @@
   <h3>{{ _('Impuestos') }}</h3>
 
   <div class="row">
+    <p>{{ _('VIVIENDA HABITUAL') }}</p>
     <div class="form-group">
-      <label for="select-house">{{  _('Valor catastral de la vivienda') }}</label>
+      <label for="select-house">{{  _('Introduce el valor catastral de la vivienda') }}</label>
       <div class="input-group">
-        <input id="select-house" type="text" class="form-control" placeholder="{{ _('Introduce el valor catastral de la vivienda') }}">
+        <input id="select-house" type="text" class="form-control">
         <div class="input-group-addon">€</div>
       </div>
     </div>
@@ -15,14 +16,26 @@
       <label for="select-house-bonus">{{ _('Bonificaciones') }}</label>
       <select id="select-house-bonus" class="form-control">
         <option value="0" type="text" selected="selected">{{ _('Ninguna') }}</option>
-        <option value="1" type="text">{{ _('Familia numerosa hasta 5 hijos') }}</option>
-        <option value="2" type="text">{{ _('Familia numerosa de 6 o más hijos') }}</option>
-        <option value="3" type="text">{{ _('Sistemas para el aprovechamiento de la energía del sol') }}</option>
+        <option value="1" type="text">{{ _('Familia numerosa con 3 hijos') }}</option>
+        <option value="2" type="text">{{ _('Familia numerosa con 4 hijos') }}</option>
+        <option value="3" type="text">{{ _('Familia numerosa con 5 o más hijos') }}</option>
+        <option value="4" type="text">{{ _('Programa de Vivienda Vacía o similares') }}</option>
       </select>
+    </div>
+
+    <p style="clear: both">&nbsp;</p>
+    <p style="clear: both">{{ _('VIVIENDA ADICIONAL') }}</p>
+    <div class="form-group" style="clear: both">
+      <label for="select-house-extra">{{  _('Introduce el valor catastral de la vivienda') }}</label>
+      <div class="input-group">
+        <input id="select-house-extra" type="text" class="form-control">
+        <div class="input-group-addon">€</div>
+      </div>
     </div>
   </div>
 
-  <div class="row">
+  <div class="row" style="border-bottom: none;">
+    <p style="clear: both">{{ _('VEHÍCULO PRINCIPAL') }}</p>
     <div class="form-group">
       <label for="select-vehicle">{{ _('Vehículo') }}</label>
       <select id="select-vehicle" class="form-control">
@@ -47,15 +60,15 @@
       <select id="select-vehicle-bonus" class="form-control">
         <option value="0" type="text" selected="selected">{{ _('Ninguna') }}</option>
         <option value="1" type="text">{{ _('Exención por discapacidad') }}</option>
-        <option value="2" type="text">{{ _('Vehículos históricos') }}</option>
+        <option value="2" type="text">{{ _('Vehículos históricos o de más de 25 años') }}</option>
         <option value="3" type="text">{{ _('Vehículos eléctricos, híbridos o a gas') }}</option>
       </select>
     </div>
-  </div>
 
-  <div class="row">
+    <p style="clear: both">&nbsp;</p>
+    <p style="clear: both">{{ _('VEHÍCULO ADICIONAL') }}</p>
     <div class="form-group">
-      <label for="select-extra-vehicle">{{ _('Vehículo adicional') }}</label>
+      <label for="select-extra-vehicle">{{ _('Vehículo') }}</label>
       <select id="select-extra-vehicle" class="form-control">
         <option value="0" type="text" selected="selected">{{ _('Ninguno') }}</option>
         <option value="1" type="text">{{ _('Ciclomotores') }}</option>
@@ -72,13 +85,12 @@
         <option value="12" type="text">{{ _('Turismo de 20 caballos fiscales en adelante') }}</option>
       </select>
     </div>
-    <div class="select-info">{{ _('IVTM') }}: <span id="select-extra-vehicle-tax"></span></div>
     <div class="form-group" style="clear: both">
       <label for="select-extra-vehicle-bonus">{{ _('Bonificaciones') }}</label>
       <select id="select-extra-vehicle-bonus" class="form-control">
         <option value="0" type="text" selected="selected">{{ _('Ninguna') }}</option>
-        <option value="1" type="text">{{ _('Vehículos de más de 25 años') }}</option>
-        <option value="2" type="text">{{ _('Vehículos históricos') }}</option>
+        <option value="1" type="text">{{ _('Exención por discapacidad') }}</option>
+        <option value="2" type="text">{{ _('Vehículos históricos o de más de 25 años') }}</option>
         <option value="3" type="text">{{ _('Vehículos eléctricos, híbridos o a gas') }}</option>
       </select>
     </div>
@@ -88,23 +100,27 @@
   <h3>{{ _('Tasas') }}</h3>
 
   <div class="row">
+    <p style="clear: both">{{ _('RECOGIDA DE RESIDUOS') }}</p>
     <div class="form-group">
-      <label for="select-garbage">{{ _('¿Abonas la tasa de basuras de tu vivienda?') }}</label>
+      <label for="select-garbage">{{ _('¿Tienes compostador?') }}</label>
       <select id="select-garbage" class="form-control">
-        <option value="0" type="text" selected="selected">{{ _('No') }}</option>
+        <option value="0" type="text" selected="selected">{{ _('Selecciona una opción') }}</option>
         <option value="1" type="text">{{ _('Sí') }}</option>
+        <option value="2" type="text">{{ _('No') }}</option>
       </select>
     </div>
     <div class="select-info">{{ _('Basuras') }}: <span id="select-garbage-tax"></span></div>
   </div>
 
   <div class="row">
+    <p style="clear: both">{{ _('ENTRADA DE VEHÍCULOS') }}</p>
     <div class="form-group">
       <label for="select-parking">{{ _('¿Tienes un vado?') }}</label>
       <select id="select-parking" class="form-control">
-        <option value="0" type="text" selected="selected">{{ _('No') }}</option>
-        <option value="1" type="text">{{ _('Sí, de 3 metros') }}</option>
-        <option value="2" type="text">{{ _('Sí, de 5 metros') }}</option>
+        <option value="0" type="text" selected="selected">{{ _('Selecciona una opción') }}</option>
+        <option value="1" type="text">{{ _('No') }}</option>
+        <option value="2" type="text">{{ _('Sí, de 3 metros') }}</option>
+        <option value="3" type="text">{{ _('Sí, de 5 metros') }}</option>
       </select>
     </div>
     <div class="select-info">{{ _('Vados') }}: <span id="select-parking-tax"></span></div>

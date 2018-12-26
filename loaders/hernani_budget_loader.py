@@ -3,7 +3,7 @@ from budget_app.loaders import SimpleBudgetLoader
 
 
 expenses_mapping = {
-    'default': {'ic_code': 17, 'fc_code': 13, 'full_ec_code': 0, 'description': 1, 'forecast_amount': 4, 'actual_amount': 9},
+    'default': {'ic_code': 17, 'fc_code': 13, 'full_ec_code': 0, 'description': 2, 'forecast_amount': 4, 'actual_amount': 9},
 }
 
 income_mapping = {

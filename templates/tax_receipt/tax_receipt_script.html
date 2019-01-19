@@ -30,7 +30,7 @@
     // Set tax receipt taxes values
     TaxReceipt.taxes.house.callback = function(selector, values) {
       var value = houseValue();
-      var quota = value * 0.001959;
+      var quota = value * 0.001979;
       var bonus = $('#select-house-bonus').val() | 0;
       var bonusValues = [0, .5, .6, .9, .5];
       return (quota * (1 - bonusValues[bonus])) + TaxReceipt.taxes.houseExtra.callback()
@@ -38,13 +38,13 @@
     TaxReceipt.taxes.houseExtra = {};
     TaxReceipt.taxes.houseExtra.callback = function() {
       var value = houseExtraValue();
-      var quota = value * 0.001959
+      var quota = value * 0.001979
       var bonus = 0;
       var bonusValues = [-1];
       return quota * (1 - bonusValues[bonus]);
     };
 
-    TaxReceipt.taxes.vehicle.values = [0, 10.50, 10.50, 19.20, 39.20, 78.30, 156.55, 28.00, 82.10, 152.60, 218.70, 290.45, 366.40];
+    TaxReceipt.taxes.vehicle.values = [0, 10.60, 10.60, 19.40, 39.60, 79.10, 158.10, 28.30, 82.90, 154.15, 220.90, 293.35, 370.05];
     TaxReceipt.taxes.vehicle.callback = function(selector, values) {
       var value = $('#select-vehicle').val();
       var quota = values[value];
@@ -59,7 +59,7 @@
       return quota * (1 - bonusValues[bonus]) + TaxReceipt.taxes.vehicleExtra.callback();
     };
     TaxReceipt.taxes.vehicleExtra = {};
-    TaxReceipt.taxes.vehicleExtra.values = [0, 10.50, 10.50, 19.20, 39.20, 78.30, 156.55, 28.00, 82.10, 152.60, 218.70, 290.45, 366.40];
+    TaxReceipt.taxes.vehicleExtra.values = [0, 10.60, 10.60, 19.40, 39.60, 79.10, 158.10, 28.30, 82.90, 154.15, 220.90, 293.35, 370.05];;
     TaxReceipt.taxes.vehicleExtra.callback = function() {
       var value = $('#select-extra-vehicle').val();
       var quota = this.values[value];
@@ -75,7 +75,7 @@
     };
 
     // Set parking tax values
-    TaxReceipt.taxes.parking.values      = [0, 0, 17.30*3, 17.30*5];
+    TaxReceipt.taxes.parking.values      = [0, 0, 17.50*3, 17.50*5];
 
     // Add extra tax
     // We can add new taxed to TaxReceipt.taxes object

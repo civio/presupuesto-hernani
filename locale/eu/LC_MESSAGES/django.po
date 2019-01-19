@@ -107,50 +107,50 @@ msgstr "IBILGAILU NAGUSIA"
 msgid "VEHÍCULO ADICIONAL"
 msgstr "IBILGAILU GEHIGARRIA"
 
-msgid "Ciclomotores"
-msgstr "Ziklomotorrak"
+msgid "Ciclomotor"
+msgstr "Ziklomotor"
 
-msgid "Motocicletas hasta 125 cc"
-msgstr "125 cc-tik beherako motorrak"
+msgid "Motocicleta hasta 125 cc"
+msgstr "125cc arteko motozikleta"
 
-msgid "Motocicletas entre 125 cc y 250 cc"
-msgstr "125 eta 250 cc bitarteko motorrak"
+msgid "Motocicleta entre 125 cc y 250 cc"
+msgstr "125cc-tik gorako 250cc bitarteko motozikleta"
 
-msgid "Motocicletas entre 250 cc y 500 cc"
-msgstr "250 eta 500 cc bitarteko motorrak"
+msgid "Motocicleta entre 250 cc y 500 cc"
+msgstr "250cc-tik gorako 500cc bitarteko motozikleta"
 
-msgid "Motocicletas entre 500 cc y 1000 cc"
-msgstr "500 eta 1.000 cc bitarteko motorrak"
+msgid "Motocicleta entre 500 cc y 1000 cc"
+msgstr "500cc-tik gorako 1000cc bitarteko motozikleta"
 
-msgid "Motocicletas de más de 1000 cc"
-msgstr "1.000 cc-tik goragoko motorrak"
+msgid "Motocicleta de más de 1000 cc"
+msgstr "1000cc-tik gorako motozikleta"
 
-msgid "Turismo de menos de 9 caballos fiscales"
-msgstr "9 zerga-zaldi baino gutxiago dutenak turismoa"
+msgid "Coche muy pequeño (menos de 9 caballos fiscales)"
+msgstr "Oso txikia autoa (9 z.f. behera)"
 
-msgid "Turismo de 9 hasta 11,99 caballos fiscales"
-msgstr "9 eta 11'99 zerga-zaldi bitartekoak turismoa"
+msgid "Coche pequeño (entre 9 y 11,99 caballos fiscales)"
+msgstr "Auto txikia (9tik gorako 11,99ra bitarteko z.f.)"
 
-msgid "Turismo de 12 hasta 13,99 caballos fiscales"
-msgstr "12 eta 13'99 zerga-zaldi bitartekoak turismoa"
+msgid "Coche mediano (entre 12 y 13,99 caballos fiscales)"
+msgstr "Auto ertaina (12tik gorako 13,99ra bitarteko z.f.)"
 
-msgid "Turismo de 14 hasta 15,99 caballos fiscales"
-msgstr "14 eta 15'99 zerga-zaldi bitartekoak turismoa"
+msgid "Coche moderadamente grande (entre 14 y 15,99 caballos fiscales)"
+msgstr "Zuhurki handia autoa (14tik gorako 15,99ra bitarteko z.f.)"
 
-msgid "Turismo de 16 hasta 19,99 caballos fiscales"
-msgstr "16 eta 19'99 zerga-zaldi bitartekoak turismoa"
+msgid "Coche grande (entre 16 y 19,99 caballos fiscales)"
+msgstr "Auto handia (16tik gorako 19,99ra bitarteko z.f.)"
 
-msgid "Turismo de 20 caballos fiscales en adelante"
-msgstr "20 zerga-zalditik gorakoak turismoa"
+msgid "Coche muy grande (de 20 caballos fiscales en adelante)"
+msgstr "Oso handia autoa (20 z.f. gora)"
 
 msgid "Exención por discapacidad"
 msgstr "Desgaitasunagatik salbuespena"
 
-msgid "Vehículos históricos o de más de 25 años"
-msgstr "Historikoak edo 25 urtez sobera ibilgailuak"
+msgid "Vehículo histórico o de más de 25 años"
+msgstr "Historikoa edo 25 urtez sobera ibilgailua"
 
-msgid "Vehículos eléctricos, híbridos o a gas"
-msgstr "Elektrikoa, hibridoa edo gasoa ibilgailuak"
+msgid "Vehículo eléctrico, híbrido o a gas"
+msgstr "Elektrikoa, hibridoa edo gasoa ibilgailua"
 
 msgid "Selecciona una opción"
 msgstr "Aukera bat hautatu"

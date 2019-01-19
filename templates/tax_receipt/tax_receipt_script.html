@@ -74,8 +74,7 @@
       return quota * (1 - bonusValues[bonus]);
     };
 
-    // Set tax receipt taxes values
-    TaxReceipt.taxes.garbage.values      = [0, 19.50*4, 26.00*4];
+    // Set parking tax values
     TaxReceipt.taxes.parking.values      = [0, 0, 17.30*3, 17.30*5];
 
     // Add extra tax
@@ -88,6 +87,10 @@
       callback: TaxReceipt.getSelectTaxPaid
     }
     */
+
+    // Remove unused taxes
+    delete TaxReceipt.taxes.garbage;
+
 
     // Override redrawGrid method
     TaxReceipt.redrawGrid = function() {

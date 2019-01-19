@@ -155,15 +155,6 @@ msgstr "Elektrikoa, hibridoa edo gasoa ibilgailuak"
 msgid "Selecciona una opción"
 msgstr "Aukera bat hautatu"
 
-msgid "Basuras"
-msgstr "Hondakinen bilketa"
-
-msgid "RECOGIDA DE RESIDUOS"
-msgstr "HONDAKINEN BILKETA"
-
-msgid "¿Tienes compostador?"
-msgstr "Konpostagailua bat duzu?"
-
 msgid "Sí"
 msgstr "Bai"
 

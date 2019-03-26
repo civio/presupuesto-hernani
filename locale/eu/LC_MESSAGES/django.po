@@ -39,6 +39,10 @@ msgstr "Hernaniko Udalaren diru-sarrerak eta gastuak"
 msgid "Gobierno de Aragón"
 msgstr "Hernaniko Udala"
 
+#: templates/shared/header.html:33
+msgid "Presupuestos"
+msgstr "Aurrekontu gardena"
+
 #: templates/shared/data_sources.html:9
 msgid "Datos de inflación (Medias anuales de IPC para Aragón)"
 msgstr "Inflazioaren datuak (Euskal Herrian KPIren urteroko batez bestekoak)"

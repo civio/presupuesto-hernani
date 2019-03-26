@@ -43,6 +43,10 @@ msgstr "Ingresos y gastos en el Ayuntamiento de Hernani"
 msgid "Gobierno de Aragón"
 msgstr "Ayuntamiento de Hernani"
 
+#: templates/shared/header.html:33
+msgid "Presupuestos"
+msgstr "Presupuesto transparente"
+
 #: templates/shared/data_sources.html:9
 msgid "Datos de inflación (Medias anuales de IPC para Aragón)"
 msgstr "Datos de inflación (Medias anuales del IPC para el País Vasco)"

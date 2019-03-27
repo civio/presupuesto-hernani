@@ -1,30 +1,53 @@
 <footer class="main-footer">
-  <div class="container">
-    <p class="credit-aragon">
-      <span>{{ _('Un proyecto de') }}</span>
-      <a href="https://civio.es" class="link-civio" target="_blank">Civio</a>
-      <span>&nbsp;{{ _('basado en el código de') }} </span>
-      <a href="http://opendata.aragon.es" class="link-aragon" target="_blank">Open Data Aragón </a>
-    </p>
+  <div class="container footer-custom">
+    <div class="row">
+      <div class="col-sm-2"></div>
+      <div class="col-sm-4">
+        <h4>{{ _('Síguenos') }}</h4>
+        <ul>
+          <li><a href="{{ main_entity_web_url | replace('/eu/', '/' + LANGUAGE_CODE + '/') }}"><i class="fas fa-globe"></i> {{ _('Web municipal') }}</a></li>
+          <li><a href="https://twitter.com/hernanikoudala"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="https://www.facebook.com/hernanikoudala"><i class="fab fa-facebook"></i> Facebook</a></li>
+          <li><a href="https://www.youtube.com/channel/UCV3AkOoxh1BLGtye--znvwA/videos"><i class="fab fa-youtube"></i> Youtube</a></li><br/>
+          <li><a href="http://www.hernani.eus/{{ LANGUAGE_CODE }}/udala-sare-sozialetan-interneten"><i class="fas fa-globe"></i> {{ _('Redes de departamentos municipales') }}</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-1"></div>
+      <div class="col-sm-3">
+        <h4>{{ _('Contacto') }}</h4>
+        <ul>
+          <li>Gudarien plaza 1. behea <br>20120 Hernani, Gipuzkoa</li>
+          <li><a href="tel:943 337 000"><i class="fas fa-phone-square"></i> 943 337 000</a></li>
+          <li><a href="mailto:hhz@hernani.eus"><i class="fas fa-envelope-square"></i> hhz@hernani.eus</a></li><br/>
+          <li><a href="http://www.hernani.eus/{{ LANGUAGE_CODE }}/telefonoak-helbideak"><i class="far fa-address-book"></i> {{ _('Departamentos') }}</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-2"></div>
+    </div>
+  </div>
+  <div class="container footer-logos">
+    <a href="{{ main_entity_web_url | replace('/eu/', '/' + LANGUAGE_CODE + '/') }}" title="_('Hernaniko Udala')" target="_blank"><img src="{% static 'assets/logo.png' %}"></a>
   </div>
   <div class="container">
     <ul class="footer-menu">
-      <!-- Link a la Web del Ayuntamiento -->
       <li>
-        <a href="{% if LANGUAGE_CODE == 'eu' %}{{ main_entity_web_url }}{% else %}{{ main_entity_web_url | replace('/eu/', '/es/') }}{% endif %}" target="_blank">{{ _('Gobierno de Aragón') }}</a>
+        <a href="{{ main_entity_legal_url | replace('/eu/', '/' + LANGUAGE_CODE + '/') }}" target="_blank">{{ _('Aviso Legal') }}</a>
       </li>
-      <!-- Link al Aviso Legal del Ayuntamiento -->
-      {% if main_entity_legal_url %}
       <li>
-        <a href="{% if LANGUAGE_CODE == 'eu' %}{{ main_entity_legal_url }}{% else %}{{ main_entity_legal_url | replace('/eu/', '/es/') }}{% endif %}" target="_blank">{{ _('Aviso Legal') }}</a>
+        <a href="{{ main_entity_privacy_url | replace('/eu/', '/' + LANGUAGE_CODE + '/') }}" target="_blank">{{ _('Política de Privacidad') }}</a>
       </li>
-      {% endif %}
-      <!-- Link a la Política de Privacidad del Ayuntamiento -->
-      {% if main_entity_privacy_url %}
       <li>
-        <a href="{% if LANGUAGE_CODE == 'eu' %}{{ main_entity_privacy_url }}{% else %}{{ main_entity_privacy_url | replace('/eu/', '/es/') }}{% endif %}" target="_blank">{{ _('Política de Privacidad') }}</a>
+        <a href="https://civio.es" target="_blank">{{ _('Empresa desarrolladora') }}</a>
       </li>
-      {% endif %}
+      <li class="credit-aragon">
+        {% if LANGUAGE_CODE == 'eu' %}
+          <a href="http://opendata.aragon.es" class="link-aragon" target="_blank">Open Data Aragón</a>
+          <span>{{ _('Un proyecto basado en el código de') }}</span>
+        {% else %}
+          <span>{{ _('Un proyecto basado en el código de') }}</span>
+          <a href="http://opendata.aragon.es" class="link-aragon" target="_blank">Open Data Aragón</a>
+        {% endif %}
+      </li>
     </ul>
   </div>
 </footer>

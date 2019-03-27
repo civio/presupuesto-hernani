@@ -1,5 +1,7 @@
 @import "theme-variables";
 
+@import url("https://use.fontawesome.com/releases/v5.6.3/css/all.css");
+
 .home-content .options .option>div .icon {
   color: $brand-secondary;
 }
@@ -7,4 +9,53 @@
 .tax-receipt-content #tax-amount {
   border: none;
   background: $brand-secondary;
+}
+
+.main-footer {
+  border-top: 6px $brand-primary solid;
+  text-align: center;
+
+  .footer-menu li {
+    float: none !important;
+  }
+
+  .credit-aragon {
+    font-weight: normal;
+  }
+
+  .fab  {
+    padding-right: 2px;
+  }
+
+  .fas {
+    padding-right: 4px;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .main-footer .footer-menu li {
+    display: inline-block;
+  }
+}
+
+.footer-custom {
+  text-align: left;
+
+  ul {
+    padding-left: 15px;
+  }
+
+  li {
+    list-style: none;
+    font-size: 1.5rem;
+    margin: 5px 0;
+  }
+
+  a {
+    color: $footer-color;
+  }
+}
+
+.footer-logos {
+  margin: 20px auto 30px;
 }

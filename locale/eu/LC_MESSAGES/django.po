@@ -43,6 +43,34 @@ msgstr "Hernaniko Udala"
 msgid "Presupuestos"
 msgstr "Aurrekontu gardena"
 
+#: templates/shared/footer.html:
+msgid "Síguenos"
+msgstr "Jarraitu gaitzazu"
+
+msgid "Web municipal"
+msgstr "Udal webgunea"
+
+msgid "Redes de departamentos municipales"
+msgstr "Udal sailak sareetan"
+
+msgid "Contacto"
+msgstr "Kontaktua"
+
+msgid "Departamentos"
+msgstr "Kontaktuak sailka"
+
+msgid "Aviso Legal"
+msgstr "Lege oharra"
+
+msgid "Política de Privacidad"
+msgstr "Datu babestuak"
+
+msgid "Empresa desarrolladora"
+msgstr "Garatzailea"
+
+msgid "Un proyecto basado en el código de"
+msgstr "-en oinarritutako kodea"
+
 #: templates/shared/data_sources.html:9
 msgid "Datos de inflación (Medias anuales de IPC para Aragón)"
 msgstr "Inflazioaren datuak (Euskal Herrian KPIren urteroko batez bestekoak)"

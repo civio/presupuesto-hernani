@@ -12,10 +12,10 @@
     "browser-sync": "browser-sync start --files \"static/stylesheets/scss/*.scss, static/stylesheets/scss/*.js\" --proxy 127.0.0.1:8000 --reload-delay=500 --reload-debounce=500",
     "start": "concurrently --kill-others \"npm run css-watch\" \"npm run browser-sync\""
   },
-  "dependencies": {
-    "browser-sync": "^2.18.2",
-    "concurrently": "^3.1.0",
-    "node-sass": "^3.13.0",
-    "nodemon": "^1.11.0"
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "concurrently": "^5.0.0",
+    "node-sass": "^4.13.0",
+    "nodemon": "^2.0.1"
   }
 }

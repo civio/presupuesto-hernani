@@ -8,6 +8,7 @@ expenses_mapping = {
 
 income_mapping = {
     'default': {'budget_line': 0, 'description': 3, 'budgeted_amount': 4, 'executed_amount': 5},
+    '2019': {'budget_line': 0, 'description': 2, 'budgeted_amount': 5, 'executed_amount': 6},
 }
 
 programme_mapping = {

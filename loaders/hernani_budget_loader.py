@@ -1,14 +1,17 @@
 # -*- coding: UTF-8 -*-
 from budget_app.loaders import SimpleBudgetLoader
 
+import re
+
 
 expenses_mapping = {
-    'default': {'budget_line': 0, 'description': 2, 'budgeted_amount': 4, 'executed_amount': 9},
+    'default': {'budget_line': 0, 'description': 2, 'budgeted_amount': 4, 'executed_amount': 5},
+    '2019': {'budget_line': 0, 'description': 2, 'budgeted_amount': 3, 'executed_amount': 9},
 }
 
 income_mapping = {
-    'default': {'budget_line': 0, 'description': 3, 'budgeted_amount': 4, 'executed_amount': 5},
-    '2019': {'budget_line': 0, 'description': 2, 'budgeted_amount': 5, 'executed_amount': 6},
+    'default': {'budget_line': 0, 'description': 2, 'budgeted_amount': 4, 'executed_amount': 5},
+    '2019': {'budget_line': 0, 'description': 2, 'budgeted_amount': 4, 'executed_amount': 6},
 }
 
 programme_mapping = {
@@ -42,6 +45,10 @@ class HernaniBudgetLoader(SimpleBudgetLoader):
 
     # Parse an input line into fields
     def parse_item(self, filename, line):
+        # Ignore  non-data lines
+        if not re.match(r'[12] ', line[0]):
+            return None
+
         # Type of data
         is_expense = (filename.find('gastos.csv') != -1)
         is_actual = (filename.find('/ejecucion_') != -1)
@@ -51,16 +58,8 @@ class HernaniBudgetLoader(SimpleBudgetLoader):
 
         # Budget line
         # We get the full budget line, so we have to split and amend
-        budget_line = line[mapper.budget_line].split(" ")
-        budget_line_codes = budget_line[1].split(".")
-        budget_line_year = budget_line[2]
-
-        # There are budget lines from past years, that require some special treatment
-        # as shouldn't be included in the budget or executed amounts
-        is_past_budget_line = int(budget_line_year) < int(self.year)
-
-        if is_past_budget_line:
-            return None
+        budget_line = line[mapper.budget_line].split(' ')
+        budget_line_codes = budget_line[1].split('.')
 
         # Income budget lines codes doesn't include institutional ones, and that
         # changes the shape of the codes string, so we need to amend it to allow
@@ -76,13 +75,12 @@ class HernaniBudgetLoader(SimpleBudgetLoader):
 
         # Institutional code
         # We got 2- digit codes (budget_line_codes[0]), that would correspond to
-        # institutional codes, but there doesn't seem to be a clear correspondance with
-        # entity sections, so all expenses and income goes to the root node
-        ic_code = '000'
+        # institutional codes, so we need to zfill them to get 3- digit codes
+        ic_code = budget_line_codes[0].zfill(3)
 
         # Functional code
         # We got 5- digit functional codes as input or nothing for some income data
-        fc_code = "".join(budget_line_codes[3:5])
+        fc_code = ''.join(budget_line_codes[3:5])
 
         # Description
         description = line[mapper.description].strip()

@@ -136,9 +136,9 @@ FEATURED_PROGRAMMES = ['15110', '16210', '33400', '23190', '92002', '34200', '32
 # Use new Sankey visualization or the old one. Default: False
 OVERVIEW_USE_NEW_VIS = True
 
-OVERVIEW_INCOME_NODES = ['40', '42', '87', '11', '31', '93', '32']
+OVERVIEW_INCOME_NODES = ['42', '11', '31', '28', '65', '13']
 
-OVERVIEW_EXPENSE_NODES = ['33', '16', '13', '23', '15', '32', '92', '34', '01', '17', '93']
+OVERVIEW_EXPENSE_NODES = ['16', '15', '92', '23', '33', '32', '34', '13', '17']
 
 # How much padding between Sankey nodes. Default: 2 (Optional)
 # OVERVIEW_NODE_PADDING = 2

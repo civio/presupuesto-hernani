@@ -70,9 +70,6 @@ class HernaniBudgetLoader(SimpleBudgetLoader):
         # Economic code
         ec_code = budget_line_codes[1]
 
-        # Item numbers are the last two digits from the economic codes (fourth and fifth digits)
-        item_number = budget_line_codes[2]
-
         # Institutional code
         # We got 2- digit codes (budget_line_codes[0]), that would correspond to
         # institutional codes, so we need to zfill them to get 3- digit codes
@@ -98,11 +95,17 @@ class HernaniBudgetLoader(SimpleBudgetLoader):
             if int(self.year) < 2015:
                 fc_code = programme_mapping.get(fc_code, fc_code)
 
+            # Item numbers are the last two digits from the economic codes (fourth and fifth digits).
+            # But, in order to differentiate items from past years with the same code (see #1070),
+            # we add the year of the original budget the item comes from.
+            item_number = budget_line[2] + "/" + budget_line_codes[2]
+
         # Income
         else:
             # Functional code
             # We don't need functional codes in income
             fc_code = None
+            item_number = ''
 
         return {
             'is_expense': is_expense,

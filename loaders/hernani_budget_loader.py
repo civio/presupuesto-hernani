@@ -102,7 +102,13 @@ class HernaniBudgetLoader(SimpleBudgetLoader):
             # Item numbers are the last two digits from the economic codes (fourth and fifth digits).
             # But, in order to differentiate items from past years with the same code (see #1070),
             # we add the year of the original budget the item comes from.
-            item_number = budget_line[2] + "/" + budget_line_codes[2]
+            original_year = budget_line[2]
+            item_number = original_year + "/" + budget_line_codes[2]
+
+            # Now, in order to make it a bit more obvious that some line items are from past years,
+            # we add that at the end of their description.
+            if original_year!=self.year:
+                description = description + " (" + original_year + ")"
 
         # Income
         else:

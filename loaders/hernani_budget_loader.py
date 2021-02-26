@@ -8,12 +8,14 @@ expenses_mapping = {
     'default': {'budget_line': 0, 'description': 2, 'budgeted_amount': 4, 'executed_amount': 5},
     '2019': {'budget_line': 0, 'description': 2, 'budgeted_amount': 3, 'executed_amount': 9},
     '2020': {'budget_line': 0, 'description': 2, 'budgeted_amount': 3, 'executed_amount': 9},
+    '2021': {'budget_line': 0, 'description': 2, 'budgeted_amount': 3, 'executed_amount': 9},
 }
 
 income_mapping = {
     'default': {'budget_line': 0, 'description': 2, 'budgeted_amount': 4, 'executed_amount': 5},
     '2019': {'budget_line': 0, 'description': 2, 'budgeted_amount': 4, 'executed_amount': 6},
     '2020': {'budget_line': 0, 'description': 2, 'budgeted_amount': 4, 'executed_amount': 6},
+    '2021': {'budget_line': 0, 'description': 2, 'budgeted_amount': 4, 'executed_amount': 6},
 }
 
 programme_mapping = {

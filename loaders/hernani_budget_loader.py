@@ -71,8 +71,22 @@ class HernaniBudgetLoader(SimpleBudgetLoader):
         if len(budget_line_codes) < 5:
             budget_line_codes.insert(0, '00')
 
+        # Description
+        description = line[mapper.description].strip()
+
         # Economic code
         ec_code = budget_line_codes[1]
+
+        # Item numbers are the last two digits from the economic codes (fourth and fifth digits).
+        # But, in order to differentiate items from past years with the same code (see #1070),
+        # we add the year of the original budget the item comes from.
+        original_year = budget_line[2]
+        item_number = original_year + "/" + budget_line_codes[2]
+
+        # Now, in order to make it a bit more obvious that some line items are from past years,
+        # we add that at the end of their description.
+        if original_year!=self.year:
+            description = description + " (" + original_year + ")"
 
         # Institutional code
         # We got 2- digit codes (budget_line_codes[0]), that would correspond to
@@ -82,9 +96,6 @@ class HernaniBudgetLoader(SimpleBudgetLoader):
         # Functional code
         # We got 5- digit functional codes as input or nothing for some income data
         fc_code = ''.join(budget_line_codes[3:5])
-
-        # Description
-        description = line[mapper.description].strip()
 
         # Parse amount
         amount = line[mapper.executed_amount if is_actual else mapper.budgeted_amount]
@@ -99,23 +110,11 @@ class HernaniBudgetLoader(SimpleBudgetLoader):
             if int(self.year) < 2015:
                 fc_code = programme_mapping.get(fc_code, fc_code)
 
-            # Item numbers are the last two digits from the economic codes (fourth and fifth digits).
-            # But, in order to differentiate items from past years with the same code (see #1070),
-            # we add the year of the original budget the item comes from.
-            original_year = budget_line[2]
-            item_number = original_year + "/" + budget_line_codes[2]
-
-            # Now, in order to make it a bit more obvious that some line items are from past years,
-            # we add that at the end of their description.
-            if original_year!=self.year:
-                description = description + " (" + original_year + ")"
-
         # Income
         else:
             # Functional code
             # We don't need functional codes in income
             fc_code = None
-            item_number = ''
 
         return {
             'is_expense': is_expense,
